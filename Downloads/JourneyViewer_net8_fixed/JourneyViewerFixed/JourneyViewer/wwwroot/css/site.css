@@ -1,0 +1,104 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+body {
+    padding: 20px;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+
+table {
+    background: white;
+}
+
+
+.btn {
+    margin-right: 5px;
+}
+
+/* EDS Table */
+.eds-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+    .eds-table th {
+        background: #f4f6f8;
+        color: #333;
+        font-weight: 600;
+        text-align: left;
+        padding: 12px 15px;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .eds-table td {
+        padding: 11px 15px;
+        border-bottom: 1px solid #eee;
+        color: #444;
+    }
+
+    .eds-table tbody tr:hover {
+        background-color: #f8fafc;
+    }
+
+    .eds-table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+.eds-id {
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.action-type {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.action-name {
+    font-weight: 500;
+    color: #333;
+}

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<JourneyViewer.Models.EDSViewModel>
+
+
+@{
+    ViewData["Title"] = "EDS Details";
+}
+
+
+<h2>
+    EDS Details
+</h2>
+
+
+<a href="javascript:history.back()"
+   class="btn btn-secondary">
+    Back
+</a>
+
+
+<br />
+<br />
+
+
+
+<table class="eds-table">
+    <thead>
+        <tr>
+            <th>EDS ID</th>
+            <th>EDS Name</th>
+            <th>Action Name</th>
+            <th>Action Type</th>
+            <th>CRM EDS</th>
+            <th>CRM EDS Name</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var eds in Model)
+        {
+            <tr>
+                <td class="eds-id">@eds.EDSId</td>
+                <td>@eds.EDSName</td>
+                <td class="action-name">
+                    @(string.IsNullOrEmpty(eds.displayName) ? "-" : eds.displayName)
+                </td>
+                <td>
+                    <span class="action-type">
+                        @(string.IsNullOrEmpty(eds.type) ? "-" : eds.type)
+                    </span>
+                </td>
+                <td>@eds.CrmEDS</td>
+                <td>@eds.CrmEDSName</td>
+            </tr>
+        }
+    </tbody>
+</table>

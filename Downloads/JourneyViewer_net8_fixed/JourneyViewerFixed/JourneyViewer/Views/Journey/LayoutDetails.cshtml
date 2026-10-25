@@ -1,0 +1,78 @@
+﻿@model IEnumerable<JourneyViewer.Models.LayoutViewModel>
+
+@{
+    ViewData["Title"] = "Layouts";
+}
+
+<h2>Layouts</h2>
+
+<a href="/Journey"
+   class="btn btn-secondary">
+    Back To Journey
+</a>
+
+<br />
+<br />
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Layout ID</th>
+            <th>Layout Name</th>
+            <th>Layout Version</th>
+            <th>Unique Layout Name</th>
+            <th>Master ID</th>
+            <th>Master Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.LayoutId
+                </td>
+
+                <td>
+                    @item.LayoutName
+                </td>
+
+                <td>
+                    @item.LayoutVersion
+                </td>
+
+                <td>
+                    @item.UniqueLayoutName
+                </td>
+
+                <td>
+                    @item.MasterId
+                </td>
+
+                <td>
+                    @item.MasterName
+                </td>
+
+                <td>
+                    <a class="btn btn-success"
+                       href="@Url.Action(
+                                              "EDSDetails",
+                                              "Journey",
+                                              new
+                                              {
+                                                  layoutId = item.LayoutId,
+                                                  flowName = ViewBag.FlowName
+                                              })">
+                        View EDS
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>

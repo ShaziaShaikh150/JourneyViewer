@@ -1,0 +1,43 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Flows";
+}
+
+<h2>Flows</h2>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Flow Unique Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var flowName in Model)
+        {
+            <tr>
+
+                <td>
+                    @flowName
+                </td>
+
+                <td>
+                    <a class="btn btn-primary"
+                       href="@Url.Action(
+                                                  "LayoutDetails",
+                                                  "Journey",
+                                                  new { flowName = flowName })">
+                        View Layouts
+                    </a>
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
